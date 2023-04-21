@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use 'sass:color';
+@use 'sass:meta';
+@use '../settings';
+
+@mixin custom-properties() {
+  @each $name, $color in settings.$colors {
+    @if meta.type-of($color) == 'color' {
+      --color-#{$name}: #{$color};
+      --rgb-#{$name}: #{color.red($color), color.green($color),
+        color.blue($color)};
+    }
+  }
+
+  @each $name, $value in settings.$spacings {
+    --spacing-#{$name}: #{$value};
+  }
+}

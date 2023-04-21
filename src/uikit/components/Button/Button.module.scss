@@ -1,0 +1,18 @@
+@use "../../../styles/mixins";
+@use "../../../styles/settings";
+
+.button {
+  height: auto;
+  width: auto;
+  font-size: xx-large;
+  padding: 16px;
+  border: 2px solid black;
+  border-radius: 16px;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+
+  &--green {
+    background-color: green;
+  }
+}

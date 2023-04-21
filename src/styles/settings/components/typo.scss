@@ -1,0 +1,39 @@
+$typo: (
+  // Variant
+  "sm":
+    (
+      // Breakpoint
+      "default":
+        (
+          "font-size": 13px,
+        )
+    ),
+  "md": (
+    // Breakpoint
+    "default":
+      (
+        "font-size": 19px,
+      )
+  ),
+  "lg": (
+    // Breakpoint
+    "default":
+      (
+        "font-size": 22px,
+      )
+  ),
+  "xl": (
+    // Breakpoint
+    "default":
+      (
+        "font-size": 29px,
+      )
+  ),
+  "xxl": (
+    // Breakpoint
+    "default":
+      (
+        "font-size": 40px,
+      )
+  )
+);

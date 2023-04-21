@@ -1,0 +1,40 @@
+@use './settings';
+@use './mixins';
+@use '../uikit/components/Heading/Heading.module.scss';
+
+:root {
+  @include mixins.custom-properties();
+  @include mixins.component-properties();
+}
+
+body,
+html {
+  background: var(--color-creme);
+  font-size: 16px;
+  color: var(--color-dark);
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  @extend .heading;
+  @extend .heading--xxl;
+}
+
+h2 {
+  @extend .heading;
+  @extend .heading--xl;
+}
+
+h3 {
+  @extend .heading;
+  @extend .heading--lg;
+}
+
+h4 {
+  @extend .heading;
+  @extend .heading--md;
+}

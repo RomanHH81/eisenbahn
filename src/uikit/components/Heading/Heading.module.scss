@@ -1,0 +1,21 @@
+.heading {
+  &--sm {
+    font-size: var(--typo-sm-font-size);
+  }
+  
+  &--md {
+    font-size: var(--typo-md-font-size);
+  }
+
+  &--lg {
+    font-size: var(--typo-lg-font-size);
+  }
+
+  &--xl {
+    font-size: var(--typo-xl-font-size);
+  }
+  
+  &--xxl {
+    font-size: var(--typo-xxl-font-size);
+  }
+}

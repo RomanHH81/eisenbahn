@@ -1,0 +1,17 @@
+$section: (
+  // Variant
+  'default':
+    (
+      // Breakpoint
+      'default':
+        (
+          'spacing': var(--spacing-xxl),
+          'max-width': 1680px,
+        )
+    ),
+  'small': (
+    'default': (
+      'max-width': 940px,
+    ),
+  )
+);

@@ -1,0 +1,9 @@
+@use "../base";
+
+$badge: (
+    "default": (
+        "default": (
+            "height": calc(#{base.$base-unit} * 3)
+        )
+    )
+);

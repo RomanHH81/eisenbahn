@@ -1,0 +1,21 @@
+@use '../settings';
+
+$media-direction: min;
+
+@mixin breakpoint($breakpoint, $direction: $media-direction) {
+  @if ($breakpoint == 'default') {
+    @content;
+  } @else {
+    @if map-has-key(settings.$breakpoints, $breakpoint) {
+      @media (#{$direction}-width: #{map-get(settings.$breakpoints, $breakpoint)}) {
+        @content;
+      }
+    } @else if unitless($breakpoint) {
+      $breakpoint: $breakpoint + 0px;
+
+      @media (#{$direction}-width: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}

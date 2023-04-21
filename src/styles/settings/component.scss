@@ -1,0 +1,10 @@
+@use 'components';
+
+$component: (
+  'section': components.$section,
+  'button': components.$button,
+  'typo': components.$typo,
+  'hero': components.$hero,
+  'badge': components.$badge,
+  'tab': components.$tab,
+);

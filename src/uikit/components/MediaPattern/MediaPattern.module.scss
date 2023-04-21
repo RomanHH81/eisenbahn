@@ -1,0 +1,31 @@
+.mediaPattern {
+  &__container {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    gap: 16px;
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text {
+    margin-left: 16px;
+    ::first-letter {
+      font-size: 24px;
+      color: rgb(0, 4, 255);
+      font-weight: bold;
+    }
+  }
+
+  &__image {
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  &__description {
+    text-align: center;
+    font-weight: bold;
+  }
+}

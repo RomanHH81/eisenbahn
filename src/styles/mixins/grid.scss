@@ -1,0 +1,47 @@
+@use './breakpoint.scss' as *;
+
+$gridGapSmall: var(--spacing-md);
+$gridGapLarge: var(--spacing-lg);
+
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin responsive-grid($breakpoint: 'm') {
+  @include grid(2);
+  column-gap: $gridGapSmall;
+  row-gap: $gridGapSmall;
+
+  @include breakpoint($breakpoint) {
+    @include grid(12);
+    column-gap: $gridGapLarge;
+    row-gap: $gridGapLarge;
+  }
+}
+
+@mixin cols($span, $startCol: auto) {
+  grid-column: $startCol / span $span;
+}
+
+@mixin cols-breakpoint($breakpoint, $span, $startCol: auto) {
+  @include breakpoint($breakpoint) {
+    @include cols($span, $startCol);
+  }
+}
+
+@mixin generate-grid-classes($max-columns: 12) {
+  @each $breakpoint, $x in $breakpoints {
+    @for $i from 1 through $max-columns {
+      @if $breakpoint== 'default' {
+        .col-#{$i} {
+          @include cols($i);
+        }
+      } @else {
+        .col-#{$breakpoint}-#{$i} {
+          @include cols-breakpoint($breakpoint, $i);
+        }
+      }
+    }
+  }
+}

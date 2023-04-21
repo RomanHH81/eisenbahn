@@ -1,0 +1,11 @@
+@use '../base';
+
+$tab: (
+  'default': (
+    'default': (
+      'base-height': base.$base-unit * 1,
+      'inner-spacing': var(--spacing-sm),
+      'background': var(--color-light),
+    ),
+  ),
+);

@@ -1,0 +1,21 @@
+@use 'sass:meta';
+@use 'sass:map';
+@use '../settings';
+@use 'breakpoint';
+
+@mixin component-properties() {
+  @each $breakpoint in map.keys(settings.$breakpoints) {
+    @include breakpoint.breakpoint($breakpoint) {
+      // css variables for components
+      @each $name, $variants in settings.$component {
+        @each $variant, $properties in $variants {
+          @each $property, $value in map.get($properties, $breakpoint) {
+            @if meta.type-of($property) != 'null' {
+              --#{$name}-#{$variant}-#{$property}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+}

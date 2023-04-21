@@ -1,0 +1,9 @@
+@use './base';
+
+$spacings: (
+  'sm': base.$base-unit,
+  'md': base.$base-unit * 2,
+  'lg': base.$base-unit * 3,
+  'xl': base.$base-unit * 4,
+  'xxl': base.$base-unit * 5,
+);

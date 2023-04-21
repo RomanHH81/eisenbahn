@@ -1,0 +1,11 @@
+@use '../base';
+
+$button: (
+  'default': (
+    'default': (
+      'base-height': base.$base-unit * 6,
+      'inner-spacing': var(--spacing-md),
+      'background': var(--color-light),
+    ),
+  ),
+);

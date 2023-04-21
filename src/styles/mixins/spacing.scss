@@ -1,0 +1,95 @@
+@use 'sass:list';
+@use 'sass:map';
+@use '../settings';
+
+@mixin spacing($spacing: 's', $direction: 'all', $factor: 1) {
+  @if type-of($spacing) == 'string' {
+    @if $spacing == null {
+      @error "Spacing name must be provided";
+    }
+
+    @if not list.index(map.keys(settings.$spacings), $spacing) {
+      @error "#{$spacing} is not a valid key for spacings #{type-of($spacing)}";
+    }
+
+    @if $direction == 'all' or $direction == 'top' or $direction == 'vertical' {
+      margin-top: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+
+    @if $direction ==
+      'all' or
+      $direction ==
+      'right' or
+      $direction ==
+      'horizontal'
+    {
+      margin-right: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+
+    @if $direction ==
+      'all' or
+      $direction ==
+      'bottom' or
+      $direction ==
+      'vertical'
+    {
+      margin-bottom: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+
+    @if $direction ==
+      'all' or
+      $direction ==
+      'left' or
+      $direction ==
+      'horizontal'
+    {
+      margin-left: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+  }
+}
+
+@mixin spacing-inner($spacing: 's', $direction: 'all', $factor: 1) {
+  @if type-of($spacing) == 'string' {
+    @if $spacing == null {
+      @error "Spacing name must be provided";
+    }
+
+    @if not list.index(map.keys(settings.$spacings), $spacing) {
+      @error "#{$spacing} is not a valid key for spacings #{type-of($spacing)}";
+    }
+
+    @if $direction == 'all' or $direction == 'top' or $direction == 'vertical' {
+      padding-top: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+
+    @if $direction ==
+      'all' or
+      $direction ==
+      'right' or
+      $direction ==
+      'horizontal'
+    {
+      padding-right: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+
+    @if $direction ==
+      'all' or
+      $direction ==
+      'bottom' or
+      $direction ==
+      'vertical'
+    {
+      padding-bottom: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+
+    @if $direction ==
+      'all' or
+      $direction ==
+      'left' or
+      $direction ==
+      'horizontal'
+    {
+      padding-left: calc(var(--spacing-#{$spacing}) * #{$factor});
+    }
+  }
+}
