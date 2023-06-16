@@ -1,0 +1,33 @@
+@use "../../../styles/settings";
+@use "../../../styles/mixins";
+
+.section {
+  @include mixins.spacing("xl", "bottom");
+
+  padding: var(--section-default-spacing);
+  max-width: var(--section-default-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: settings.$base-unit;
+
+  &--light {
+    background: var(--color-light);
+  }
+
+  &--dark {
+    background: var(--color-dark);
+    color: var(--color-creme);
+  }
+
+  &--brand {
+    background: var(--color-brand);
+  }
+
+  &--lowerdark {
+    background: var(--color-lowerdark);
+  }
+
+  &--small {
+    max-width: var(--section-small-max-width);
+  }
+}

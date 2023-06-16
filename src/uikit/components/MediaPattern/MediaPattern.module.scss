@@ -1,9 +1,7 @@
 .mediaPattern {
   &__container {
     display: flex;
-    border: 2px solid black;
-    border-radius: 10px;
-    gap: 16px;
+
     &--reverse {
       flex-direction: row-reverse;
     }

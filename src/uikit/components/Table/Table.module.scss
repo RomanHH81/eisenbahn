@@ -1,0 +1,37 @@
+@use "../../../styles/mixins";
+@use "../../../styles/settings";
+
+.table {
+  width: 100%;
+  td,
+  th {
+    @include mixins.spacing-inner("md");
+  }
+
+  tr {
+    text-align: right;
+  }
+
+  tr:nth-child(odd) {
+    td {
+      background: var(--color-creme);
+      border-radius: settings.$base-unit;
+    }
+  }
+
+  &__start {
+    text-align: left;
+  }
+
+  &__row {
+    text-align: left;
+  }
+}
+
+.timetable {
+  &__title {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+}

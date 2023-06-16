@@ -1,9 +1,10 @@
+import { Section } from "@/uikit/components/Section/Section";
 import Link from "next/link";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <Section>
       <p>Wir freuen uns über Spenden :</p>
       <p>
         Arbeitsgemeinschaft Geesthachter Eisenbahn e.V. Hamburger Volksbank eG
@@ -40,7 +41,7 @@ const page = () => {
         <Link href="/antrag.pdf">Antrag auf Mitgliedschaft</Link>
         <span>Bitte ausfüllen und per Post an obige Adresse senden.</span>
       </p>
-    </div>
+    </Section>
   );
 };
 

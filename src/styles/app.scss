@@ -1,6 +1,6 @@
-@use './settings';
-@use './mixins';
-@use '../uikit/components/Heading/Heading.module.scss';
+@use "./settings";
+@use "./mixins";
+@use "../uikit/components/Heading/Heading.module.scss";
 
 :root {
   @include mixins.custom-properties();

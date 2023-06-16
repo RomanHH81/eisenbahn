@@ -3,9 +3,9 @@
 
 .menu {
   $this: &;
-
   width: 100%;
   margin: 0 auto;
+  color: var(--color-dark);
 
   &__list {
     display: flex;
@@ -13,12 +13,14 @@
     list-style-type: none;
     text-decoration: none;
     position: relative;
-    background-color: aqua;
+    background: var(--color-brand);
+    border-radius: settings.$base-unit;
 
     &--child {
       display: none;
       position: absolute;
-      background-color: rgb(32, 209, 47);
+      background: var(--color-brand);
+      border-radius: settings.$base-unit;
 
       @at-root #{$this}__list__item:hover & {
         display: flex;
@@ -40,6 +42,7 @@
 
     &__link {
       text-decoration: none;
+      color: var(--color-dark);
     }
   }
 }

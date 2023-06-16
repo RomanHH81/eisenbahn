@@ -1,0 +1,23 @@
+@use '../../../styles/settings';
+@use '../../../styles/mixins';
+
+.tab {
+  border: 3px solid var(--color-dark);
+  border-radius: settings.$base-unit;
+  height: var(--tab-default-base-height);
+  padding: 16px 10px;
+  background: var(--button-default-background);
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: var(--color-dark);
+  gap: var(--spacing-sm);
+
+  &--active {
+    background: var(--color-brand);
+  }
+}

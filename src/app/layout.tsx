@@ -1,3 +1,4 @@
+import Footer from "@/views/Footer/Footer";
 import "../styles/app.scss";
 
 import { NavItemProps } from "@/views/Navigation/Navigation";
@@ -23,7 +24,7 @@ const navItemProps: NavItemProps[] = [
       },
       {
         label: "Unsere Fahrzeuge",
-        href: "/ueber-uns/",
+        href: "/ueber-uns/unsere-fahrzeuge",
       },
       {
         label: "Unsere Strecke",
@@ -31,7 +32,7 @@ const navItemProps: NavItemProps[] = [
       },
       {
         label: "Die ehemalige Bergedorf-Geesthachter Eisenbahn",
-        href: "",
+        href: "/ueber-uns/ehemalige-eisenbahn",
       },
       {
         label: "Das Buch zur Strecke",
@@ -43,25 +44,25 @@ const navItemProps: NavItemProps[] = [
       },
       {
         label: "Impressum",
-        href: "/ueber-uns/",
+        href: "/ueber-uns/impressum",
       },
     ],
   },
   {
     label: "Fahrpläne & Reservierungen",
-    href: "",
+    href: "./",
     childs: [
       {
         label: "Fahrplan 2023",
-        href: "",
+        href: "/fahrplaene/fahrplan",
       },
       {
         label: "Fahrpreise ab 2023",
-        href: "",
+        href: "/fahrplaene/fahrpreise",
       },
       {
         label: "Anfragen und Reservierunge",
-        href: "",
+        href: "/fahrplaene/anfragen",
       },
     ],
   },
@@ -71,19 +72,11 @@ const navItemProps: NavItemProps[] = [
     childs: [
       {
         label: "Eisenbahnbücher aus Nachlass",
-        href: "",
-      },
-      {
-        label: "kohlebefeuerten Raddampfer",
-        href: "",
-      },
-      {
-        label: "kohlebefeuerten Eisbrecher",
-        href: "",
+        href: "/links/nachlass",
       },
       {
         label: "Links zu anderen Bahnen",
-        href: "",
+        href: "/links/links",
       },
     ],
   },
@@ -100,8 +93,9 @@ export default function RootLayout({
         <title>Eisenbahn tuut tuut </title>
       </head>
       <body>
-        <Navigation data={navItemProps}></Navigation>
+        <Navigation data={navItemProps} />
         {children}
+        <Footer />
       </body>
     </html>
   );

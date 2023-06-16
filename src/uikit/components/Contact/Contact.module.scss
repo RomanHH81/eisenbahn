@@ -1,0 +1,28 @@
+@use "../../../styles/mixins";
+@use "../../../styles/settings";
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  grid-template-areas:
+    "head head"
+    "left right";
+
+  &__Head {
+    grid-area: head;
+  }
+
+  &__Item {
+    margin: 10px 0;
+
+    &:nth-child(odd) {
+      grid-area: left;
+    }
+
+    &:nth-child(even) {
+      grid-area: right;
+    }
+  }
+}

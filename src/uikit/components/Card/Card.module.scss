@@ -1,0 +1,21 @@
+@use '../../../styles/settings';
+@use '../../../styles/mixins';
+
+.card {
+  @include mixins.spacing-inner('xl');
+
+  border-radius: settings.$base-unit;
+
+  &--light {
+    background: var(--color-light);
+  }
+
+  &--dark {
+    background: var(--color-dark);
+    color: var(--color-creme);
+  }
+
+  &--brand {
+    background: var(--color-brand);
+  }
+}

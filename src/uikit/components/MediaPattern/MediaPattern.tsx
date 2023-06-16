@@ -1,23 +1,18 @@
-import Image from "next/image";
 import { ReactNode } from "react";
 import styles from "./MediaPattern.module.scss";
 import classNames from "classnames";
 
 export interface MediaPatternInterface {
-  headline?: string;
-  children: ReactNode;
-  imagePath: string;
-  imageCaption: string;
-  imageDescription: string;
+  children?: ReactNode;
+  image?: ReactNode;
+  imageCaption?: string;
   imagePosition?: "left";
 }
-
+2;
 const MediaPattern = ({
-  headline,
   children,
-  imagePath,
+  image,
   imageCaption,
-  imageDescription,
   imagePosition,
 }: MediaPatternInterface) => {
   const classes = classNames({
@@ -27,17 +22,10 @@ const MediaPattern = ({
 
   return (
     <div className={styles.mediaPattern}>
-      <h1>{headline}</h1>
       <div className={`${styles.mediaPattern__container} ${[classes]}`}>
         <div className={styles.mediaPattern__text}>{children}</div>
         <figure>
-          <Image
-            src={imagePath}
-            alt={imageDescription}
-            width={150}
-            height={150}
-            className={styles.mediaPattern__image}
-          />
+          {image}
           <figcaption className={styles.mediaPattern__description}>
             {imageCaption}
           </figcaption>

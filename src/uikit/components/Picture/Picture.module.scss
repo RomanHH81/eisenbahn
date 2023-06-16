@@ -1,0 +1,17 @@
+@use "../../../styles/mixins";
+@use "../../../styles/settings";
+
+.pictureContainer {
+  &__image {
+    width: 250px;
+    height: 250px;
+    border-radius: settings.$base-unit;
+    align-items: center;
+  }
+
+  &__description {
+    font-weight: bold;
+    padding: settings.$base-unit 0;
+    // text-align: center;
+  }
+}

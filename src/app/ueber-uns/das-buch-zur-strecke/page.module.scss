@@ -1,0 +1,7 @@
+@use "../../../styles/mixins";
+@use "../../../styles/settings";
+
+.Container {
+  display: flex;
+  justify-content: end;
+}

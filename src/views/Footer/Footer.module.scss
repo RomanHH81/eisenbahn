@@ -1,0 +1,7 @@
+@use "../../styles/mixins";
+@use "../../styles/settings";
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+}
